@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务与能力 - Design Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0A0A0A',
+                        'dark-lighter': '#1A1A1A',
+                        neon: '#4ADE80',
+                        'neon-light': '#86EFAC',
+                        accent: '#FF3366'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white">
+    <!-- 导航栏容器 -->
+    <div id="nav-container"></div>
+
+    <!-- 页面标题 -->
+    <section class="relative pt-32 pb-20">
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-6">
+                    我们的<span class="text-neon">服务与能力</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    从概念到实现，我们提供全方位的设计解决方案
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心服务 -->
+    <section class="relative py-20 bg-dark-lighter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 服务卡片 1：品牌设计 -->
+                <div class="service-card" data-service-id="brand-design" data-tab="brand">
+                    <div class="flex flex-col h-full">
+                        <div class="flex-grow">
+                            <div class="icon-box">
+                                <i class="fas fa-layer-group text-4xl text-neon"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">品牌设计</h3>
+                            <p class="text-gray-400">专业的品牌视觉设计服务，为企业打造独特的品牌形象</p>
+                            <ul class="mt-4 space-y-2 text-gray-400">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-neon mr-2"></i>
+                                    品牌标识设计
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-neon mr-2"></i>
+                                    VI视觉系统
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-neon mr-2"></i>
+                                    品牌包装设计
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-6">
+                            <button class="w-32 py-2 px-4 bg-neon/10 text-neon rounded-full text-sm font-semibold hover:bg-neon/20 transition-colors duration-300 flex items-center justify-center group">
+                                了解更多
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 服务卡片 2：UI设计 -->
+                <div class="service-card" data-service-id="ui-design" data-tab="ui">
+                    <div class="flex flex-col h-full">
+                        <div class="flex-grow">
+                            <div class="icon-box">
+                                <i class="fas fa-desktop text-4xl text-neon"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">UI/UX 设计</h3>
+                            <p class="text-gray-400">创造直观、美观且用户友好的界面设计，提供卓越的用户体验</p>
+                            <ul class="mt-4 space-y-2 text-gray-400">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-neon mr-2"></i>
+                                    用户界面设计
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-neon mr-2"></i>
+                                    交互体验设计
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-neon mr-2"></i>
+                                    原型与线框图
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-6">
+                            <button class="w-32 py-2 px-4 bg-neon/10 text-neon rounded-full text-sm font-semibold hover:bg-neon/20 transition-colors duration-300 flex items-center justify-center group">
+                                了解更多
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 服务卡片 3：平面设计 -->
+                <div class="service-card" data-service-id="graphic-design" data-tab="graphic">
+                    <div class="flex flex-col h-full">
+                        <div class="flex-grow">
+                            <div class="icon-box">
+                                <i class="fas fa-pen-nib text-4xl text-neon"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">平面设计</h3>
+                            <p class="text-gray-400">创意的平面设计服务，为您的品牌传达独特的视觉语言</p>
+                            <ul class="mt-4 space-y-2 text-gray-400">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-neon mr-2"></i>
+                                    海报设计创作
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-neon mr-2"></i>
+                                    宣传物料设计
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-neon mr-2"></i>
+                                    广告创意设计
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-6">
+                            <button class="w-32 py-2 px-4 bg-neon/10 text-neon rounded-full text-sm font-semibold hover:bg-neon/20 transition-colors duration-300 flex items-center justify-center group">
+                                了解更多
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例展示区域 -->
+    <section class="relative pt-0 pb-20 bg-dark-lighter">
+        <div class="max-w-7xl mx-auto">
+            <!-- 品牌设计案例 -->
+            <div id="brand-content" class="tab-content hidden">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-8">
+                        <div class="relative aspect-[16/9] overflow-hidden rounded-lg">
+                            <img src="images/services/Brand.png" alt="品牌设计案例" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="col-span-4 px-8 py-6 bg-dark-lighter rounded-lg">
+                        <span class="text-neon text-sm font-semibold tracking-wider uppercase">品牌设计案例</span>
+                        <h3 class="text-3xl font-bold mt-4 mb-6">品牌形象塑造</h3>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                            为 Apple，Beats，Nothing 等品牌打造的全新品牌旗舰店，包括店铺设计、活动设计、产品设计，帮助客户建立独特的品牌识别。
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="text-center p-4 bg-dark rounded-lg">
+                                <div class="text-2xl font-bold text-neon mb-2">1500%</div>
+                                <div class="text-sm text-gray-400">品牌认知度提升</div>
+                            </div>
+                            <div class="text-center p-4 bg-dark rounded-lg">
+                                <div class="text-2xl font-bold text-neon mb-2">150%</div>
+                                <div class="text-sm text-gray-400">市场份额增长</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="images/services/applelogo.png" alt="子案例1" class="rounded-lg">
+                            <img src="images/services/beatslogo.png" alt="子案例2" class="rounded-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UI设计案例 -->
+            <div id="ui-content" class="tab-content hidden">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-8">
+                        <div class="relative aspect-[16/9] overflow-hidden rounded-lg">
+                            <img src="images/services/ui.png" alt="UI设计案例" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="col-span-4 px-8 py-6 bg-dark-lighter rounded-lg">
+                        <span class="text-neon text-sm font-semibold tracking-wider uppercase">UI/UX 设计案例</span>
+                        <h3 class="text-3xl font-bold mt-4 mb-6">用户体验升级</h3>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                            为 iCloud 设计下单支付界面，通过优化用户体验流程，提升用户满意度和转化率。
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="text-center p-4 bg-dark rounded-lg">
+                                <div class="text-2xl font-bold text-neon mb-2">300%</div>
+                                <div class="text-sm text-gray-400">用户体验提升</div>
+                            </div>
+                            <div class="text-center p-4 bg-dark rounded-lg">
+                                <div class="text-2xl font-bold text-neon mb-2">150%</div>
+                                <div class="text-sm text-gray-400">转化率提升</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="images/services/iCloudlogo.png" alt="子案例1" class="rounded-lg">
+                            <!-- <img src="https://via.placeholder.com/300x200" alt="子案例2" class="rounded-lg"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 平面设计案例 -->
+            <div id="graphic-content" class="tab-content hidden">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-8">
+                        <div class="relative aspect-[16/9] overflow-hidden rounded-lg">
+                            <img src="images/services/Graphic.jpg" alt="平面设计案例" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="col-span-4 px-8 py-6 bg-dark-lighter rounded-lg">
+                        <span class="text-neon text-sm font-semibold tracking-wider uppercase">平面设计案例</span>
+                        <h3 class="text-3xl font-bold mt-4 mb-6">创意广告设计</h3>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                            为朴茨茅斯修道院学校设计系列创意广告，通过独特的视觉语言表达活动主题，提升品牌影响力。
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="text-center p-4 bg-dark rounded-lg">
+                                <div class="text-2xl font-bold text-neon mb-2">250%</div>
+                                <div class="text-sm text-gray-400">广告效果提升</div>
+                            </div>
+                            <div class="text-center p-4 bg-dark rounded-lg">
+                                <div class="text-2xl font-bold text-neon mb-2">180%</div>
+                                <div class="text-sm text-gray-400">品牌曝光提升</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="images/services/schoollogo.png" alt="子案例1" class="rounded-lg">
+                            <!-- <img src="https://via.placeholder.com/300x200" alt="子案例2" class="rounded-lg"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

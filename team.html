@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>团队介绍 - Design Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0A0A0A',
+                        'dark-lighter': '#1A1A1A',
+                        neon: '#4ADE80',
+                        'neon-light': '#86EFAC',
+                        accent: '#FF3366'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white">
+    <!-- 导航栏容器 -->
+    <div id="nav-container"></div>
+
+    <!-- 页面标题 -->
+    <section class="relative pt-32 pb-20">
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-6">
+                    认识我们的<span class="text-neon">团队</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    一支充满激情和创造力的专业团队，致力于为客户提供最优质的设计服务
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心团队成员 -->
+    <section class="relative py-20 bg-dark-lighter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">核心团队</h2>
+                <div class="w-12 h-0.5 bg-neon mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- CEO -->
+                <div class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="images/team/yintao.jpg" alt="尹弢" class="team-photo">
+                    </div>
+                    <h3 class="team-name">尹弢</h3>
+                    <div class="team-position">创始人</div>
+                    <p class="team-desc">致力于创新设计和优质用户体验，提升品牌价值并推动商业转化。</p>
+                </div>
+
+                <!-- PR -->
+                <div class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="images/team/sunchao.jpg" alt="孙超" class="team-photo">
+                    </div>
+                    <h3 class="team-name">孙超</h3>
+                    <div class="team-position">PR</div>
+                    <p class="team-desc">整合品牌传播、客户管理和产品规划，全流程推动产品从构思到落地。</p>
+                </div>
+
+                <!-- UI设计师 1 -->
+                <div class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="images/team/maji.jpg" alt="马季" class="team-photo">
+                    </div>
+                    <h3 class="team-name">马季</h3>
+                    <div class="team-position">UI 设计师</div>
+                    <p class="team-desc">打造流畅的用户体验，创造优雅的界面设计</p>
+                </div>
+
+                <!-- UI设计师 2 -->
+                <div class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="images/team/wanghuihui.jpg" alt="王辉辉" class="team-photo">
+                    </div>
+                    <h3 class="team-name">王辉辉</h3>
+                    <div class="team-position">UI 设计师</div>
+                    <p class="team-desc">专注电商设计，追求极致交互体验</p>
+                </div>
+
+                <!-- 设计师 1 -->
+                <div class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="images/team/wangyuzhang.jpg" alt="王瑜章" class="team-photo">
+                    </div>
+                    <h3 class="team-name">王瑜章</h3>
+                    <div class="team-position">视觉设计师</div>
+                    <p class="team-desc">塑造品牌视觉形象，构建独特设计语言</p>
+                </div>
+
+                <!-- 设计师 2 -->
+                <div class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="images/team/yiwanheng.jpg" alt="伊万恒" class="team-photo">
+                    </div>
+                    <h3 class="team-name">伊万恒</h3>
+                    <div class="team-position">视觉设计师</div>
+                    <p class="team-desc">擅长创意视觉表达，让设计兼具美感与商业价值</p>
+                </div>
+
+                <!-- 设计师 3 -->
+                <div class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="images/team/liuzheng.jpg" alt="刘峥" class="team-photo">
+                    </div>
+                    <h3 class="team-name">刘峥</h3>
+                    <div class="team-position">视觉设计师</div>
+                    <p class="team-desc">融合艺术与商业，创造独特视觉体验</p>
+                </div>
+
+                <!-- 资源对接 -->
+                <div class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="images/team/guoxiaokai.jpg" alt="郭小凯" class="team-photo">
+                    </div>
+                    <h3 class="team-name">郭小凯</h3>
+                    <div class="team-position">资源总监</div>
+                    <p class="team-desc">优化资源配置，确保项目高效执行</p>
+                </div>
+
+                <!-- 数据分析师 -->
+                <div class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="images/team/zhengying.jpg" alt="郑莹" class="team-photo">
+                    </div>
+                    <h3 class="team-name">郑莹</h3>
+                    <div class="team-position">数据分析师</div>
+                    <p class="team-desc">洞察数据价值，助力设计决策优化</p>
+                </div>
+
+                <!-- 投放 -->
+                <div class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="images/team/xueyan.jpg" alt="薛艳" class="team-photo">
+                    </div>
+                    <h3 class="team-name">薛艳</h3>
+                    <div class="team-position">投放总监</div>
+                    <p class="team-desc">精准广告投放，提升营销效果转化</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队文化 -->
+    <section class="relative py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">团队文化</h2>
+                <div class="w-20 h-1 bg-neon mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 文化项 1 -->
+                <div class="p-6 bg-dark-lighter rounded-lg text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-dark rounded-lg">
+                        <i class="fas fa-lightbulb text-3xl text-neon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">创新思维</h3>
+                    <p class="text-gray-400">不断探索新的设计理念和技术，追求卓越的创新精神</p>
+                </div>
+                <!-- 文化项 2 -->
+                <div class="p-6 bg-dark-lighter rounded-lg text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-dark rounded-lg">
+                        <i class="fas fa-users text-3xl text-neon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">团队协作</h3>
+                    <p class="text-gray-400">注重团队合作，共同成长，创造优秀的设计作品</p>
+                </div>
+                <!-- 文化项 3 -->
+                <div class="p-6 bg-dark-lighter rounded-lg text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-dark rounded-lg">
+                        <i class="fas fa-heart text-3xl text-neon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">热爱设计</h3>
+                    <p class="text-gray-400">对设计充满热情，追求完美，精益求精</p>
+                </div>
+                <!-- 文化项 4 -->
+                <div class="p-6 bg-dark-lighter rounded-lg text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-dark rounded-lg">
+                        <i class="fas fa-rocket text-3xl text-neon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">持续进步</h3>
+                    <p class="text-gray-400">不断学习和成长，保持对新技术的敏锐度</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

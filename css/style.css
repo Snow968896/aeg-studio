@@ -1,0 +1,422 @@
+/* 自定义样式 */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4ADE80;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4ADE80;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #4ADE80;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.mobile-nav-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4ADE80;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+    color: #4ADE80;
+}
+
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
+
+.mobile-nav-link.active {
+    color: #4ADE80;
+}
+
+.mobile-nav-link.active::after {
+    width: 100%;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    background-color: #4ADE80;
+    color: #0A0A0A;
+    font-weight: 600;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #0A0A0A;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
+                0 0 40px rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary i {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover i {
+    transform: translateX(4px);
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #4ADE80;
+    color: #4ADE80;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition-property: all;
+    transition-duration: 300ms;
+    transform: scale(1);
+}
+
+.btn-outline:hover {
+    background-color: #4ADE80;
+    color: #0A0A0A;
+    transform: scale(1.05);
+}
+
+/* 服务卡片通用样式 */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.service-card {
+    padding: 2rem;
+    background: rgba(26, 26, 26, 0.5);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(74, 222, 128, 0.1);
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(74, 222, 128, 0.3);
+}
+
+.service-card.active-tab {
+    border-color: rgba(74, 222, 128, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(74, 222, 128, 0.3),
+        0 0 20px rgba(74, 222, 128, 0.1);
+}
+
+.service-card .icon-box {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.service-card i {
+    font-size: 2rem;
+    color: #4ADE80;
+}
+
+.service-card button {
+    background: transparent;
+    color: #4ADE80;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    transition: all 0.3s ease;
+}
+
+.service-card button:hover {
+    background: rgba(74, 222, 128, 0.1);
+}
+
+.service-card.active-tab button {
+    background: rgba(74, 222, 128, 0.2);
+    border-color: rgba(74, 222, 128, 0.5);
+    color: #4ADE80;
+}
+
+.service-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.service-card p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.service-card ul {
+    margin-top: 1rem;
+}
+
+.service-card ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+}
+
+.service-card ul li i {
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* 团队成员卡片样式 */
+.team-card {
+    text-align: center;
+    padding: 2rem;
+    background: #161616;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    will-change: transform;
+}
+
+.team-card:hover {
+    border-color: rgba(74, 222, 128, 0.4);
+    transform: translateY(-12px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(74, 222, 128, 0.3),
+        0 0 20px rgba(74, 222, 128, 0.1);
+}
+
+.team-photo-wrapper {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgba(74, 222, 128, 0.2);
+}
+
+.team-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+.team-card:hover .team-photo {
+    transform: scale(1.08);
+}
+
+.team-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.team-position {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    background: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    color: #4ADE80;
+}
+
+.team-desc {
+    color: #9CA3AF;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #0A0A0A;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    color: white;
+    transition-property: colors;
+    transition-duration: 200ms;
+}
+
+.form-input::placeholder {
+    color: #9CA3AF;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4ADE80;
+}
+
+/* 背景网格图案 */
+.bg-grid-pattern {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(74, 222, 128, 0.3);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(74, 222, 128, 0.5);
+}
+
+/* 案例展示样式 */
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+}
+
+.group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+}
+
+.group:hover .group-hover\:opacity-40 {
+    opacity: 0.4;
+}
+
+/* 装饰元素动画 */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* 联系我们部分背景 */
+.connection-pattern {
+    background-image: 
+        radial-gradient(circle at 30% 30%, rgba(74, 222, 128, 0.02) 0%, transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(74, 222, 128, 0.02) 0%, transparent 60%),
+        linear-gradient(45deg, transparent 49%, rgba(74, 222, 128, 0.01) 50%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, rgba(74, 222, 128, 0.01) 50%, transparent 51%);
+    background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+    animation: connectionMove 40s linear infinite;
+}
+
+@keyframes connectionMove {
+    from {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    to {
+        background-position: 100% 100%, -100% -100%, 50px 50px, 50px 50px;
+    }
+}
+
+.connection-dots {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at center, rgba(74, 222, 128, 0.03) 0%, rgba(74, 222, 128, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at center, rgba(74, 222, 128, 0.02) 0%, rgba(74, 222, 128, 0.02) 1px, transparent 1px);
+    background-size: 30px 30px, 30px 30px;
+    background-position: 0 0, 15px 15px;
+    animation: dotsFloat 30s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes dotsFloat {
+    from {
+        background-position: 0 0, 15px 15px;
+    }
+    to {
+        background-position: 30px 30px, 45px 45px;
+    }
+}
+
+/* 案例展示区域样式 */
+.tab-content {
+    transition: all 0.3s ease;
+}
+
+.tab-content.hidden {
+    display: none;
+} 
